@@ -95,7 +95,12 @@ function draw() {
 	}
 	if(go==0){
 		drawSprites(scenes);
+		song.pause();
 	}else{
+		if(!song.isPlaying()){
+			song.play();
+		}
+
 		for(var j=0; j < scenes.length; i++){
 			scenes[j].remove();
 		}
